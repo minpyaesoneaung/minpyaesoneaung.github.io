@@ -1,0 +1,233 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #efefe9;
+}
+
+.intro {
+    background-image: url("../images/background.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    box-shadow: inset 0 0 0 2000px rgba(156, 102, 21, 0.3);
+}
+
+.introText {
+    margin: 0 auto 50px;
+    padding: 175px 15px 0px 15px;
+    text-align: center;
+}
+
+
+.introText h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #ffd892;
+    margin: 0 auto 70px;
+    background: url("../images/logo.png") no-repeat center left;
+    background-size: 55px 62px;
+    padding-left: 87px;
+    font-size: 48px;
+    display: inline-block;
+}
+
+.introText h2,
+.introText h3,
+.introText h4 {
+    text-transform: uppercase;
+    font-family: "Architects Daughter", serif;
+    color: #cdd1de;
+    margin: 0 0 70px;
+}
+
+.introText h2 {
+    font-size: 40px;
+}
+
+.introText h3 {
+    font-size: 32px;
+}
+
+.introText h4 {
+    font-size: 25px;
+}
+
+.navigation {
+    padding-top: 30px;
+    padding-bottom: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.introLinks {
+    width: 280px;
+    height: 78px;
+    background-color: #2b8243;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: "Permanent Marker";
+    color: #cdd1de;
+    text-align: center;
+    display: inline-block;
+    opacity: 0.9;
+    padding-top: 0.4em;
+}
+
+.introLinks a {
+    text-decoration: none;
+    color: #cdd1de;
+    display: block;
+}
+
+.introLinks:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transform: translateY(3px);
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-auto-rows: auto;
+    grid-row-gap: 10vw;
+    grid-column-gap: 5vw;
+    padding: 8%; 
+    justify-items: center;
+    align-items: center;
+}
+
+.about img {
+    height: 200px;
+}
+
+.about p {
+    font-family: Georgia, 'Times New Roman', Times;
+    font-size: 1.3rem;
+    color: #706d64;
+    line-height: 2rem;
+}
+
+.contact {
+    background-color: #9f7833;
+    padding: 1%;
+}
+
+form {
+    background-color: #efefe9;
+    padding: 2%;
+    border-radius: 20px;
+}
+
+form h1 {
+    padding-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+fieldset {
+    margin: auto;
+    width: 60%;
+    padding: 2% 10%;
+}
+
+legend {
+    background-color: #cdd1de;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 1.5rem;
+}
+
+form div {
+    text-align: center;
+    margin: 1vw;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+input {
+    width: 30%;
+}
+
+input:focus:valid {
+    background-color: lightgreen;
+}
+
+input:focus:invalid {
+    background-color: red;
+}
+
+input[type="submit"] {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+
+footer {
+    background: #1f150f; 
+    color: #efefe9;
+    height: 5%;
+    width: 100vw;
+    text-align: center;
+    bottom: 0;
+    left: 0;
+    padding: 10px;
+}
+
+
+@media screen and (max-width: 558px) {
+    .introLinks {
+        margin: 1rem;
+    }
+
+    fieldset {
+        margin: auto;
+        width: 90%;
+        padding: 2% 10%;
+    }
+
+}
+
+@media screen and (max-width: 960px) {
+    .about {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 756px) {
+    fieldset {
+        padding: 2% 2%;
+    }
+
+    form h1 {
+        font-size: 1.5rem;
+    }
+
+    fieldset legend {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    form div {
+        flex-direction: column;
+    }
+
+    label {
+        padding-bottom: 1rem;
+    }
+
+    input {
+        width: 95%;
+    }
+}

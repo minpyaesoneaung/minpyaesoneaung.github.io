@@ -1,0 +1,194 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #efefe9;
+}
+
+nav {
+    background-color: #413620;
+}
+
+nav ul{
+    list-style-type: none;
+    text-align: right;;
+}
+
+nav>ul>li{
+    width: 12%;
+    display: inline-block;
+    line-height: 3em;
+    text-align: center;
+}
+
+ul>li>a{
+    display: block; /* so that the link occupies the whole space */
+    text-decoration: none;
+    color: white;
+}
+
+ul>li>a:hover{
+    background-color: #cdd1de;
+    color: black;
+}
+
+.quizContainer {
+    width: auto;
+    margin: 8% 12%;
+    box-shadow: 3px 3px 10px rgb(65, 65, 65);
+    padding: 2%;
+}
+
+form {
+    padding: 2%;
+}
+
+form h1 {
+    padding-bottom: 2rem;
+    font-size: 2rem;
+    text-align: center;
+}
+
+fieldset {
+    margin: auto;
+    width: 60%;
+    padding: 2% 10%;
+    margin-bottom: 5%;
+}
+
+legend {
+    background-color: #cdd1de;
+    padding: 5px;
+    border-radius: 4px;
+    font-size: 1.5rem;
+}
+
+form div {
+    text-align: center;
+    margin: 8px;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+form h4 {
+    padding-bottom: 1rem;
+}
+
+input {
+    width: 30%;
+}
+
+input:focus:valid {
+    background-color: lightgreen;
+}
+
+input:focus:invalid {
+    background-color: red;
+}
+
+input[type="button"] {
+    margin-top: 2rem;
+    width: 100%;
+    padding: 5px;
+    font-size: 1rem;
+}
+
+form span {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+input[type="radio"] {
+    width: auto;
+    margin: 7px;
+}
+
+.results {
+    margin: auto;
+    width: 80%;
+    padding: 2rem;
+    margin-bottom: 5%;
+    line-height: 2rem;
+}
+
+.results h2,p {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.results h2 {
+    padding-bottom: 2rem;
+}
+
+
+.pointsContainer {
+    margin: auto;
+    width: 60%;
+    padding: 2% 10%;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-family:Georgia, 'Times New Roman', Times;
+}
+
+#calculateButton {
+    width: 60%;
+    margin: auto;
+}
+
+footer {
+    background: #1f150f; 
+    color: #efefe9;
+    height: 5%;
+    width: 100%;
+    text-align: center;
+    bottom: 0px;
+    left: 0px;
+    padding: 10px;
+}
+
+@media screen and (max-width: 558px) {
+    fieldset {
+        margin: auto;
+        width: 90%;
+        padding: 2% 10%;
+    }
+
+}
+
+
+@media screen and (max-width: 756px) {
+    .quizContainer {
+        margin: 4% 6%;
+    }
+
+    fieldset {
+        padding: 2% 2%;
+    }
+
+    form h1 {
+        font-size: 1.5rem;
+    }
+
+    fieldset legend {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 445px) {
+    form div {
+        flex-direction: column;
+    }
+
+    label {
+        padding-bottom: 1rem;
+    }
+
+    input {
+        width: 95%;
+    }
+}

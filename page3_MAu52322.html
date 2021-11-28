@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="author" content="Min">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Quiz</title>
+        <link rel="stylesheet" href="css/page3Styles.css">
+        <link rel="shortcut icon" type="image/png" href="images/logo.png">
+        <script src="script/page3Script.js"></script>
+    </head>
+    <body>
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="page2_MAu52322.html">Back</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html#about">About</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>  
+            </nav>
+        </header>
+        <section class="quizContainer">
+            <form action="" method="GET" enctype="application/x-www-form-urlencoded">
+                <h1>Suitability Calculator</h1>
+                <fieldset>
+                    <legend>Career Paths</legend> 
+                    <h4>Enter the four final career paths you are considering.</h4>
+                    <div>
+                        <label id="path1name" for="path1">Path 1</label>
+                        <input type="text" name="path1" id="path1" required>        
+                    </div>
+                    <div>
+                        <label id="path2name" for="path2">Path 2</label>
+                        <input type="text" name="path2" id="path2" required>
+                    </div>     
+                    <div>
+                        <label id="path3name" for="path3">Path 3</label>
+                        <input type="text" name="path3" id="path3" required>                
+                    </div>
+                    <div>
+                        <label id="path4name" for="path4">Path 4</label>
+                        <input type="text" name="path4" id="path4" required>                
+                    </div>
+                    <div>
+                        <input type="button" value="Submit" onclick="changePathLabels(this.form)">        
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Criteria</legend> 
+                    <h4>Enter the four final criteria for the career paths that you are considering.</h4>
+                    <div>
+                        <label id="criteria1name" for="criteria1">Criteria 1</label>
+                        <input type="text" name="criteria1" id="criteria1" required>        
+                    </div>
+                    <div>
+                        <label id="criteria2name" for="criteria2">Criteria 2</label>
+                        <input type="text" name="criteria2" id="criteria2" required>
+                    </div>     
+                    <div>
+                        <label id="criteria3name" for="criteria3">Criteria 3</label>
+                        <input type="text" name="criteria3" id="criteria3" required>                
+                    </div>
+                    <div>
+                        <label id="criteria4name" for="criteria4">Criteria 4</label>
+                        <input type="text" name="criteria4" id="criteria4" required>                
+                    </div>
+                    <div>
+                        <input type="button" value="Submit" onclick="changeCriteriaLabels(this.form)">        
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend id="criteria1name">Criteria 1</legend> 
+                    <h4>Rank your four career paths in terms of <span id="criteria1name">Criteria 1</span>.</h4>
+                    <div>
+                        <label id="path1name" for="path1criteria1">Path 1</label>
+                        <span>
+                            <input type="radio" name="path1criteria1" id="1pathOne1st" value=4>1st
+                            <input type="radio" name="path1criteria1" id="1pathOne2nd" value=3>2nd
+                            <input type="radio" name="path1criteria1" id="1pathOne3rd" value=2>3rd
+                            <input type="radio" name="path1criteria1" id="1pathOne4th" value=1>4th
+                        </span>        
+                    </div>
+                    <div>
+                        <label id="path2name" for="path2criteria1">Path 2</label>
+                        <span>
+                            <input type="radio" name="path2criteria1" id="1pathTwo1st" value=4>1st
+                            <input type="radio" name="path2criteria1" id="1pathTwo2nd" value=3>2nd
+                            <input type="radio" name="path2criteria1" id="1pathTwo3rd" value=2>3rd
+                            <input type="radio" name="path2criteria1" id="1pathTwo4th" value=1>4th
+                        </span>
+                    </div>     
+                    <div>
+                        <label id="path3name" for="path3criteria1">Path 3</label>
+                        <span>
+                            <input type="radio" name="path3criteria1" id="1pathThree1st" value=4>1st
+                            <input type="radio" name="path3criteria1" id="1pathThree2nd" value=3>2nd
+                            <input type="radio" name="path3criteria1" id="1pathThree3rd" value=2>3rd
+                            <input type="radio" name="path3criteria1" id="1pathThree4th" value=1>4th               
+                        </span>
+                    </div>
+                    <div>
+                        <label id="path4name" for="path4criteria1">Path 4</label>
+                        <span>
+                            <input type="radio" name="path4criteria1" id="1pathFour1st" value=4>1st
+                            <input type="radio" name="path4criteria1" id="1pathFour2nd" value=3>2nd
+                            <input type="radio" name="path4criteria1" id="1pathFour3rd" value=2>3rd
+                            <input type="radio" name="path4criteria1" id="1pathFour4th" value=1>4th                
+                        </span>
+                    </div>
+                    <div>
+                        <input type="button" value="Submit" onclick="calculatePoints1(this.form)">        
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend id="criteria2name">Criteria 2</legend> 
+                    <h4>Rank your four career paths in terms of <span id="criteria2name">Criteria 2</span>.</h4>
+                    <div>
+                        <label id="path1name" for="path1criteria2">Path 1</label>
+                        <span>
+                            <input type="radio" name="path1criteria2" id="2pathOne1st" value=4>1st
+                            <input type="radio" name="path1criteria2" id="2pathOne2nd" value=3>2nd
+                            <input type="radio" name="path1criteria2" id="2pathOne3rd" value=2>3rd
+                            <input type="radio" name="path1criteria2" id="2pathOne4th" value=1>4th
+                        </span>        
+                    </div>
+                    <div>
+                        <label id="path2name" for="path2criteria2">Path 2</label>
+                        <span>
+                            <input type="radio" name="path2criteria2" id="2pathTwo1st" value=4>1st
+                            <input type="radio" name="path2criteria2" id="2pathTwo2nd" value=3>2nd
+                            <input type="radio" name="path2criteria2" id="2pathTwo3rd" value=2>3rd
+                            <input type="radio" name="path2criteria2" id="2pathTwo4th" value=1>4th
+                        </span>
+                    </div>     
+                    <div>
+                        <label id="path3name" for="path3criteria2">Path 3</label>
+                        <span>
+                            <input type="radio" name="path3criteria2" id="2pathThree1st" value=4>1st
+                            <input type="radio" name="path3criteria2" id="2pathThree2nd" value=3>2nd
+                            <input type="radio" name="path3criteria2" id="2pathThree3rd" value=2>3rd
+                            <input type="radio" name="path3criteria2" id="2pathThree4th" value=1>4th              
+                        </span>
+                    </div>
+                    <div>
+                        <label id="path4name" for="path4criteria2">Path 4</label>
+                        <span>
+                            <input type="radio" name="path4criteria2" id="2pathFour1st" value=4>1st
+                            <input type="radio" name="path4criteria2" id="2pathFour2nd" value=3>2nd
+                            <input type="radio" name="path4criteria2" id="2pathFour3rd" value=2>3rd
+                            <input type="radio" name="path4criteria2" id="2pathFour4th" value=1>4th                
+                        </span>
+                    </div>
+                    <div>
+                        <input type="button" value="Submit" onclick="calculatePoints2(this.form)">        
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend id="criteria3name">Criteria 3</legend> 
+                    <h4>Rank your four career paths in terms of <span id="criteria3name">Criteria 3</span>.</h4>
+                    <div>
+                        <label id="path1name" for="path1criteria3">Path 1</label>
+                        <span>
+                            <input type="radio" name="path1criteria3" id="3pathOne1st" value=4>1st
+                            <input type="radio" name="path1criteria3" id="3pathOne2nd" value=3>2nd
+                            <input type="radio" name="path1criteria3" id="3pathOne3rd" value=2>3rd
+                            <input type="radio" name="path1criteria3" id="3pathOne4th" value=1>4th
+                        </span>        
+                    </div>
+                    <div>
+                        <label id="path2name" for="path2criteria3">Path 2</label>
+                        <span>
+                            <input type="radio" name="path2criteria3" id="3pathTwo1st" value=4>1st
+                            <input type="radio" name="path2criteria3" id="3pathTwo2nd" value=3>2nd
+                            <input type="radio" name="path2criteria3" id="3pathTwo3rd" value=2>3rd
+                            <input type="radio" name="path2criteria3" id="3pathTwo4th" value=1>4th
+                        </span>
+                    </div>     
+                    <div>
+                        <label id="path3name" for="path3criteria3">Path 3</label>
+                        <span>
+                            <input type="radio" name="path3criteria3" id="3pathThree1st" value=4>1st
+                            <input type="radio" name="path3criteria3" id="3pathThree2nd" value=3>2nd
+                            <input type="radio" name="path3criteria3" id="3pathThree3rd" value=2>3rd
+                            <input type="radio" name="path3criteria3" id="3pathThree4th" value=1>4th                
+                        </span>
+                    </div>
+                    <div>
+                        <label id="path4name" for="path4criteria3">Path 4</label>
+                        <span>
+                            <input type="radio" name="path4criteria3" id="3pathFour1st" value=4>1st
+                            <input type="radio" name="path4criteria3" id="3pathFour2nd" value=3>2nd
+                            <input type="radio" name="path4criteria3" id="3pathFour3rd" value=2>3rd
+                            <input type="radio" name="path4criteria3" id="3pathFour4th" value=1>4th                  
+                        </span>
+                    </div>
+                    <div>
+                        <input type="button" value="Submit" onclick="calculatePoints3(this.form)">        
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend id="criteria4name">Criteria 4</legend> 
+                    <h4>Rank your four career paths in terms of <span id="criteria4name">Criteria 4</span>.</h4>
+                    <div>
+                        <label id="path1name" for="path1criteria4">Path 1</label>
+                        <span>
+                            <input type="radio" name="path1criteria4" id="4pathOne1st" value=4>1st
+                            <input type="radio" name="path1criteria4" id="4pathOne2nd" value=3>2nd
+                            <input type="radio" name="path1criteria4" id="4pathOne3rd" value=2>3rd
+                            <input type="radio" name="path1criteria4" id="4pathOne4th" value=1>4th
+                        </span>        
+                    </div>
+                    <div>
+                        <label id="path2name" for="path2criteria4">Path 2</label>
+                        <span>
+                            <input type="radio" name="path2criteria4" id="4pathTwo1st" value=4>1st
+                            <input type="radio" name="path2criteria4" id="4pathTwo2nd" value=3>2nd
+                            <input type="radio" name="path2criteria4" id="4pathTwo3rd" value=2>3rd
+                            <input type="radio" name="path2criteria4" id="4pathTwo4th" value=1>4th
+                        </span>
+                    </div>     
+                    <div>
+                        <label id="path3name" for="path3criteria4">Path 3</label>
+                        <span>
+                            <input type="radio" name="path3criteria4" id="4pathThree1st" value=4>1st
+                            <input type="radio" name="path3criteria4" id="4pathThree2nd" value=3>2nd
+                            <input type="radio" name="path3criteria4" id="4pathThree3rd" value=2>3rd
+                            <input type="radio" name="path3criteria4" id="4pathThree4th" value=1>4th               
+                        </span>
+                    </div>
+                    <div>
+                        <label id="path4name" for="path4criteria4">Path 4</label>
+                        <span>
+                            <input type="radio" name="path4criteria4" id="4pathFour1st" value=4>1st
+                            <input type="radio" name="path4criteria4" id="4pathFour2nd" value=3>2nd
+                            <input type="radio" name="path4criteria4" id="4pathFour3rd" value=2>3rd
+                            <input type="radio" name="path4criteria4" id="4pathFour4th" value=1>4th               
+                        </span>
+                    </div>
+                    <div>
+                        <input type="button" value="Submit" onclick="calculatePoints4(this.form)">        
+                    </div>
+                </fieldset>
+                <div>
+                    <input type="button" value="Calculate" id="calculateButton" onclick="displayPoints(this.form)">        
+                </div>
+            </form>
+            <section class="results">
+                <h2>Results</h2>
+                <div class="pointsContainer">
+                    <span id="path1name">Path 1</span>
+                    <span id="path1points"></span>
+                    <span id="path2name">Path 2</span>
+                    <span id="path2points"></span>
+                    <span id="path3name">Path 3</span>
+                    <span id="path3points"></span>
+                    <span id="path4name">Path 4</span>
+                    <span id="path4points"></span>
+                </div>
+                <br>
+                <p>
+                    The top career in this final ranking above is the most suitable for you based on
+                    our calculations. But this rank does not finalize anything. The key point here is
+                    to continue reflecting deeply on your desires, and use this ranking to your own
+                    advantage as you wish. Look at your top career and rethink about its negative aspects.
+                    Do they still make you unsure, or have you decided that those are just imposters?
+                    Is there any way you can overcome these negative aspects.
+                </p>
+                <br>
+                <p>
+                    The next step is to read books, watch videos, or to talk to people, or even try
+                    internships in each of the three fields to see if it suits you. Then again,
+                    humans grow and your passion might change. But the important thing is to continue
+                    reflecting frequently, making sure there is an actual purpose in what you’re
+                    currently doing, and to work hard to achieve your goal, once you’ve narrowed it
+                    down to one.
+                </p>
+            </section>
+        </section>
+        <footer>
+            &copy; Copyright <strong>Ikigai</strong> | All Rights Reserved
+        </footer>
+    </body>
+    </html> 
