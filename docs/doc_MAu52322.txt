@@ -6,7 +6,7 @@ choice.png - https://www.freepik.com
 goal.png - https://www.freepik.com
 logo.png - https://www.wix.com/logo/maker
 
-Video Presentation Link: 
+Video Presentation Link: https://drive.google.com/file/d/1Bsn1wxFNt2NaaP4o1jDD80ybWfZqiI-x/view?usp=sharing
 
 Repository Link: https://github.com/minpyaesoneaung/minpyaesoneaung.github.io
 Project Website Address: https://minpyaesoneaung.github.io/
