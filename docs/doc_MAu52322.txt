@@ -8,5 +8,5 @@ logo.png - https://www.wix.com/logo/maker
 
 Video Presentation Link: 
 
-Repository Link:
-Project Website Address: 
+Repository Link: https://github.com/minpyaesoneaung/minpyaesoneaung.github.io
+Project Website Address: https://minpyaesoneaung.github.io/
